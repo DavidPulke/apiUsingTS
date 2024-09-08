@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="emoji-container">
+        <div class="emoji">😂</div>
+        <div class="emoji">🤣</div>
+    </div>
+    <main>
+        <div class="joke-container">
+            <h1>Get Your Joke!</h1>
+            <select id="select-joke">
+                <option value="programming">Programming</option>
+                <option value="misc">Misc</option>
+                <option value="dark">Dark</option>
+                <option value="pun">Pun</option>
+                <option value="spooky">Spooky</option>
+                <option value="christmas">Christmas</option>
+            </select>
+
+            <div class="theJoke">
+                <span class="emoji">😂</span>
+                <p class="joke">Your joke will appear here...</p>
+            </div>
+
+            <footer>
+                <p>© 2024 DavidPolak | <a
+                        href="https://api.whatsapp.com/send?phone=972536061630&text=שלום+הגעתי+אליך+מהקישור+באתר!"><i
+                            class="fa-brands fa-whatsapp"></i></a></p>
+            </footer>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
