@@ -8,15 +8,15 @@ let programmingJokes: string[] = [
 
 let API: string = `https://v2.jokeapi.dev/joke/any`;
 let main: any = document.querySelector(".theJoke");
-let select: any = document.getElementById("select-joke");
+let select: HTMLElement | null = document.getElementById("select-joke");
 
 async function getData() {
     try {
-        if (select.value === 'programming') {
+        if ((select as HTMLSelectElement).value === 'programming') {
             let randomJoke: string = programmingJokes[Math.floor(Math.random() * programmingJokes.length)];
             main.innerHTML = randomJoke;
         } else {
-            let response: any = await fetch(`https://v2.jokeapi.dev/joke/${select.value}`);
+            let response: Response = await fetch(`https://v2.jokeapi.dev/joke/${(select as HTMLSelectElement).value}`);
             let data: object = await response.json();
             showData(data);
         }
@@ -33,4 +33,4 @@ let showData = (jokeData: object | any): void => {
     }
 };
 
-select.addEventListener("change", getData);
+(select as HTMLSelectElement).addEventListener("change", getData);
