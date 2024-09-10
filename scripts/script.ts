@@ -18,6 +18,7 @@ async function getData() {
         } else {
             let response: Response = await fetch(`https://v2.jokeapi.dev/joke/${(select as HTMLSelectElement).value}`);
             let data: object = await response.json();
+
             showData(data);
         }
     } catch (error) {
